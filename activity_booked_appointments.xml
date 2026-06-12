@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/deep_blue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Top bar -->
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/menu"
+        android:contentDescription="Menu"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Data"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Title: Patient Data"/>
+
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/profile"
+        android:contentDescription="Profile"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Patient list -->
+    <ScrollView
+        android:layout_below="@id/title"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Scroll list of patients">
+
+        <LinearLayout
+            android:id="@+id/patientListLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+            <!-- Patient cards will be added dynamically here -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/homeNav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:contentDescription="Home"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+
+        <ImageView
+            android:id="@+id/bookedNav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/community"
+            android:contentDescription="Community"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+</RelativeLayout>
