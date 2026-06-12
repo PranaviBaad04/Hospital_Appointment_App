@@ -215,7 +215,7 @@ git clone https://github.com/your-username/hospital-appointment-booking-app.git
 
 ## 👨‍💻 Developer
 
-**Jyoti Chavan**
+**Pranavi Baad**
 
 ---
 
